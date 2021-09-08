@@ -11,9 +11,23 @@
 <body>
     <script>
         // С помощью цикла while вывести все простые числа(делятся только на себя и 1 без остатка) в промежутке от 0 до 100.
-        for (let i = 0; i <= 100; i++) {
-            console.log(i);
-        }
+        var number = 2, mus = [];
+
+        while (number < 100) {
+            var i = 1, countDenominator = 0;
+            while (i <= number) {
+                if (number % i == 0) {
+                    countDenominator++;
+                }
+                i++;
+            }
+            if (countDenominator <= 2) {
+                mus.push(number);
+            }
+            number++;
+        };
+
+        console.log(mus)
     </script>
 </body>
 
