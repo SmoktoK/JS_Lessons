@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // С помощью цикла while вывести все простые числа(делятся только на себя и 1 без остатка) в промежутке от 0 до 100.
+        var number = 2, mus = [];
+
+        while (number < 100) {
+            var i = 1, countDenominator = 0;
+            while (i <= number) {
+                if (number % i == 0) {
+                    countDenominator++;
+                }
+                i++;
+            }
+            if (countDenominator <= 2) {
+                mus.push(number);
+            }
+            number++;
+        };
+
+        console.log(mus)
+    </script>
+</body>
+
+</html>
